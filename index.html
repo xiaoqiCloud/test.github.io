@@ -27,7 +27,7 @@
         /* 包裹按钮的容器 */
         .button-container {
             position: absolute;
-            bottom: 30px; /* 按钮与底部之间的距离为30px */
+            bottom: 50px; /* 按钮与底部之间的距离为30px */
             width: 100%; /* 确保按钮在页面底部居中 */
             text-align: center;
         }
@@ -36,8 +36,9 @@
             background-color: #F8C400;
             border: none;
             color: #333333;
-            padding: 15px 30px;
+            padding: 12px 40px;
             font-size: 18px;
+            font-weight: bold; /* 使字体加粗 */
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s;
@@ -62,8 +63,8 @@
         console.log(data); // 输出解析后的 data 对象
 
         new OpenInstall({ // 初始化方法，与openinstall服务器交互，应尽早调用
-            appKey: data.appKey, // 替换为你在 OpenInstall 上申请的 appKey
-            channelCode: data.channelCode, // 替换为你渠道的编号
+            appKey: "sy7krx", // 替换为你在 OpenInstall 上申请的 appKey
+            channelCode: "all", // 替换为你渠道的编号
             fastInstall: false, // 快速安装功能开关，true为开启，false为关闭
             onready: function() { // 初始化成功回调方法
                 this.schemeWakeup(); // 尝试使用scheme打开App（主要用于Android以及iOS的QQ环境中）
